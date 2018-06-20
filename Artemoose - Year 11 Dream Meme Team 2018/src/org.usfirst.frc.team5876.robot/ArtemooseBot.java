@@ -143,6 +143,18 @@ public class ArtemooseBot {
 			  return false; //oh no too slow
 		  }
 	  } //end void turn()
+	  
+	  void crabWheels(){
+		  crabWheelsRight.set(0.5);
+		  crabWheelsLeft.set(0.5);
+	  }
+	  
+	  void pulleyForward(){
+		  pulley.set(0.5);
+	  }
+	  void pulleyBack(){
+		  pulley.set(-0.5);
+	  }
 	
 	void prepareForAuto() {
 		gyro.reset();

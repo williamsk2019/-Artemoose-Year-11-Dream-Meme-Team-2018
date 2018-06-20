@@ -24,8 +24,8 @@ public class AutoLeftToSwitch extends AutoTemplate{
 			 if (completed = true){
 			 completed = completed & Moose.turn(90,5); //turn right within 5 seconds
 			 }
-			 
 			 if (completed = true) {
+				Moose.pulleyForward;
 				completed = completed & Moose.driveForward(80,5); //80 in within 5 seconds
 			 }
 			 
