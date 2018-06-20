@@ -21,6 +21,11 @@ public class ArtemooseBot {
 	  SpeedController motorDriveRightFront;
 	  SpeedController motorDriveRightBack;
 	  SpeedControllerGroup right_motors;
+	  
+	  //additional motor controllers
+	  SpeedController crabWheelsLeft;
+	  SpeedController crabWheelsRight;
+	  SpeedController pulley;
 
 	  //accelerometer, gyro and encoder
 	  ADXRS450_Gyro gyro;
@@ -43,6 +48,11 @@ public class ArtemooseBot {
 	    right_motors =  new SpeedControllerGroup(motorDriveRightFront, motorDriveRightBack);
 	
 	    robotDriveBase = new DifferentialDrive(left_motors, right_motors);
+	    
+	    //additional motors
+	    crabWheelsLeft = new Spark(4);
+	    crabWheelsRight = new Spark(5);
+	    pulley = new Spark(6);
 	  
 	    accel = new BuiltInAccelerometer();
 	
